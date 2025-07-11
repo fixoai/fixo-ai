@@ -1,10 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>FIXO.AI – Your Smart Fix Partner</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #chat-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    #logo {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #333;
+    }
+
+    #chat-box {
+      text-align: left;
+    }
+
+    #messages {
+      min-height: 200px;
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    #promptInput {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0066ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004ccc;
+    }
+  </style>
 </head>
 <body>
   <div id="chat-container">
@@ -18,6 +85,7 @@
     </div>
   </div>
 
+  <!-- Firebase & Scripts -->
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
