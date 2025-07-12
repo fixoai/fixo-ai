@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FIXO.AI – Your Smart Fix Partner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="chat-container">
+    <img src="logo.png" alt="FIXO.AI Logo" id="logo">
+    <h2>Your Smart Fix Partner</h2>
+
+    <div id="chat-box">
+      <div id="messages"></div>
+      <div id="input-container">
+        <input type="text" id="promptInput" placeholder="Describe your mobile issue...">
+        <button onclick="sendPrompt()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
