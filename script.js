@@ -8,11 +8,10 @@ async function sendPrompt() {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ message: prompt })  // ✅ Changed key from prompt → message
+    body: JSON.stringify({ message: prompt })
   });
 
   const data = await response.json();
   
-  // ✅ This reads ChatGPT's reply correctly
   responseBox.innerText = data.choices?.[0]?.message?.content || "Something went wrong.";
 }
