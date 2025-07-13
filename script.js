@@ -9,19 +9,18 @@ async function sendPrompt() {
   messagesDiv.innerHTML += <div class="bot">FIXO AI: Thinking...</div>;
 
   try {
-    const response = await fetch("https://fixo-backend-4hxyw8a55-fixoaipros-projects.vercel.app/api/gpt", {
+    const response = await fetch("https://fixo-backend-9cri44c9x-fixoaipros-projects.vercel.app/api/gpt", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify({ prompt }),
+      body: JSON.stringify({ prompt: prompt })
     });
 
     const data = await response.json();
     const reply = data.reply || "No reply.";
-
     messagesDiv.innerHTML += <div class="bot">FIXO AI: ${reply}</div>;
-  } catch (err) {
-    messagesDiv.innerHTML += <div class="bot">Error: ${err.message}</div>;
+  } catch (error) {
+    messagesDiv.innerHTML += <div class="bot">Error: ${error.message}</div>;
   }
 }
