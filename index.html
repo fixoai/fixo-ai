@@ -5,6 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FIXO.AI – Your Smart Fix Partner</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #chat-container {
+      width: 100%;
+      max-width: 600px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    #logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 120px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    #chat-box {
+      margin-top: 20px;
+    }
+
+    #messages {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #f9f9f9;
+    }
+
+    .user, .bot {
+      margin-bottom: 10px;
+    }
+
+    .user {
+      color: #0066cc;
+      font-weight: bold;
+    }
+
+    .bot {
+      color: #333;
+    }
+
+    #promptInput {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <div id="chat-container">
@@ -18,9 +101,12 @@
     </div>
   </div>
 
+  <!-- Firebase Integration (Optional if not used) -->
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
+
+  <!-- ✅ Connect frontend to JS logic -->
   <script src="script.js"></script>
 </body>
 </html>
