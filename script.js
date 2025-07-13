@@ -22,3 +22,4 @@ async function sendPrompt() {
     document.getElementById("messages").innerHTML += `<div class="bot">Error: ${error.message}</div>`;
   }
 }
+const response = await fetch("https://fixo-backend.vercel.app/api/gpt", {
