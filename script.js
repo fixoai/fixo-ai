@@ -1,27 +1,27 @@
-
 async function sendPrompt() {
   const prompt = document.getElementById("promptInput").value;
   if (!prompt) return;
 
   const messagesDiv = document.getElementById("messages");
-  messagesDiv.innerHTML += `<div class="user">You: ${prompt}</div>`;
+  messagesDiv.innerHTML += <div class="user">You: ${prompt}</div>;
   document.getElementById("promptInput").value = "";
 
-  messagesDiv.innerHTML += `<div class="bot">FIXO AI: Thinking...</div>`;
+  messagesDiv.innerHTML += <div class="bot">FIXO AI: Thinking...</div>;
 
   try {
-    const response = await fetch("https://fixo-backend.vercel.app/api/gpt", {
+    const response = await fetch("https://fixo-backend-4hxyw8a55-fixoaipros-projects.vercel.app/api/gpt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ prompt })
+      body: JSON.stringify({ prompt }),
     });
 
     const data = await response.json();
     const reply = data.reply || "No reply.";
-    messagesDiv.innerHTML += `<div class="bot">FIXO AI: ${reply}</div>`;
+
+    messagesDiv.innerHTML += <div class="bot">FIXO AI: ${reply}</div>;
   } catch (err) {
-    messagesDiv.innerHTML += `<div class="bot">Error: ${err.message}</div>`;
+    messagesDiv.innerHTML += <div class="bot">Error: ${err.message}</div>;
   }
 }
