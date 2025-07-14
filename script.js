@@ -1,4 +1,4 @@
-async function sendPrompt() {
+window.sendPrompt = async function () {
   const prompt = document.getElementById("promptInput").value;
   if (!prompt) return;
 
