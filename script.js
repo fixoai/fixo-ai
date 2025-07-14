@@ -9,7 +9,7 @@ async function sendPrompt() {
   messagesDiv.innerHTML += <div class="bot">FIXO AI: Thinking...</div>;
 
   try {
-    const response = await fetch("https://fixo-backend-6rop37xo2-fixoaipros-projects.vercel.app/api/gpt", {
+    const response = await fetch("https://fixo-backend-4xsngmi23-fixoaipros-projects.vercel.app/api/gpt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
