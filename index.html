@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FIXO.AI – Your Smart Fix Partner</title>
+  <link rel="icon" href="data:," /> <!-- Favicon 404 को हटाने के लिए -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -25,5 +26,15 @@
 
   <!-- Your main script -->
   <script src="script.js"></script>
+
+  <!-- ✅ Safe way to add click listener (modern way) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const button = document.getElementById("sendButton");
+      if (button) {
+        button.addEventListener("click", sendPrompt);
+      }
+    });
+  </script>
 </body>
 </html>
