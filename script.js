@@ -24,3 +24,11 @@ async function sendPrompt() {
     messagesDiv.innerHTML += <div class="bot">Error: ${error.message}</div>;
   }
 }
+
+// Button click listener
+document.addEventListener('DOMContentLoaded', function () {
+  const sendBtn = document.getElementById("sendButton");
+  if (sendBtn) {
+    sendBtn.addEventListener("click", sendPrompt);
+  }
+});
