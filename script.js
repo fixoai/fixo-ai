@@ -25,10 +25,9 @@ async function sendPrompt() {
   }
 }
 
-// Button click listener
-document.addEventListener('DOMContentLoaded', function () {
-  const sendBtn = document.getElementById("sendButton");
-  if (sendBtn) {
-    sendBtn.addEventListener("click", sendPrompt);
+document.addEventListener("DOMContentLoaded", () => {
+  const sendButton = document.getElementById("sendButton");
+  if (sendButton) {
+    sendButton.addEventListener("click", sendPrompt);
   }
 });
